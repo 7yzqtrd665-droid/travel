@@ -17,8 +17,7 @@ a{
 }
 
 .main{
-	Width:95%;
-	margin: auto;
+	 
 }
 .main-title{
 	font-size: clamp(1.875rem, 1.05rem + 4.125vw, 6rem);
@@ -29,11 +28,11 @@ a{
 	margin-bottom: 32px;
 }
 .main-text{
-	width: 600px;
+	width: 100%;
 	margin: auto;
 	text-align: center;
 	/*КОМБО ДЛЯ ЛЮБОГО ТЕКСТА*/
-	font-size: clamp(1rem, 0.825rem + 0.875vw, 1.875rem);
+	font-size: clamp(2rem, 1.5417rem + 2.2917vw, 3.375rem);
 	font-weight: 400;
 	line-height: 40px;
 }
@@ -42,6 +41,7 @@ a{
 	border: 1px solid greenyellow;
 	margin-left: 10%;
 	margin-bottom: 5%;
+	margin-top: 64px;
 }
 .main-minitext{
 	margin: 0;
@@ -69,51 +69,49 @@ a{
   
 }
 
-.about__title {
-  font-size: 72px;
+.about_title {
+  font-size:45px;
   line-height: 1.1;
   font-weight: 900;
   margin: 0 0 40px;
   max-width: 700px;
 }
 
-.about__content {
+.about_content {
   max-width: 700px;
   margin-bottom: 60px;
 }
 
-.about__paragraph {
+.about_paragraph {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.about__stats {
+.about_stats {
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px; /* Расстояние между строчками статистики */
+  gap: 8px; 
 }
 
-.about__stat-item {
+.about_stat-item {
   font-size: 18px;
   line-height: 1.2;
 }
 
-.about__stat-item b {
+.about_stat-item b {
   font-weight: bold;
-  margin-left: 8px; /* Отступ перед цифрой */
+  margin-left: 8px; 
 }
 
 .gallery{
-	width: 1184px;
 	border:	2px solid lime;
 	margin: auto;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
 	gap: 16px;
+	grid-template-columns: repeat(auto-fill, minmax(230px, 1fr))
 }
 .places{
 	border:	2px solid yellow;
@@ -179,6 +177,9 @@ a{
 .place-hint{
 	margin: 0;
 }
+.place-hint:hover{
+	cursor: pointer;
+}
 .baikal{
 	width: 100%;
 	height: 70vh;
@@ -194,12 +195,12 @@ a{
 	background-size: cover;
 }
 .baikal_title{
-	width: 	100%;
-	height: 100%;
+	width: 80%;
+	height: 80%;
 	margin: 0;
 	position: relative;
 	z-index: 2;
-	font-size: 72px;
+	font-size: clamp(2rem, 1.1667rem + 4.1667vw, 4.5rem);
 	font-weight: 900;
 	line-height: 76px;
 	width: 560px;
@@ -207,23 +208,20 @@ a{
 	margin-bottom: 32px;
 	text-align: center;
 	transition: 1s;
+
+  
+
 }
-.baikal_title:hover{
-	color:red;
-	font-size: clamp(2rem, 1.275rem + 3.625vw, 5.625rem);
-	transform: rotate(90deg);
-	cursor: pointer;
+.text-preview {
+  white-space: nowrap;      /* Запрещаем перенос на новую строку */
+  overflow: hidden;         /* Прячем то, что не влезло */
 }
-.baikal_text{
-	margin: 0;
-	position: relative;
-	z-index: 2;
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 22px;
-	width: 360px;
-	height: 66px;
-	text-align: center;
+
+
+
+.text-preview {
+  white-space: nowrap;      /* Запрещаем перенос на новую строку */
+  overflow: hidden;         /* Прячем то, что не влезло */
 }
 .overlay{
 	width: 100%;
@@ -236,14 +234,15 @@ a{
 	z-index: 1;
 	transition: 1s;
 }
+
 .overlay:hover{
 	opacity: 0.6;
-	/*cursor: progress;*/
+	cursor: progress;
 	cursor: pointer;
+
 }
 .footer{
 	width: 100%;
-	height: 18px;
 	border:	2px solid orange;
 	margin: auto;
 	display: flex;
@@ -261,13 +260,6 @@ a{
 
 
 
-	.main-title{
-		line-height: 44px;
-	}
-
-	.main-text{
-		line-height: 20px;
-	}
 	.footer{
 		flex-direction: column;
 	}
@@ -280,17 +272,8 @@ a{
 
 
 
-	.gallery{
-		width: 720px;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-		gap: 16px;
-	}
-
-	.gallery-image{
-		width: 352px;
-		height: 264px;
-	}
+	
+	
 
 	.places{
 		
@@ -314,26 +297,4 @@ a{
 	.baikal{
 		height: 50vh;
 	}
-
-	
-
-
-	.gallery{
-		width: 928px;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr 1fr;
-		gap: 14px;
-	}
-
-	.gallery-image{
-		width: 300px;
-		height: 225px;
-	}
-
-	
-
-
-
-	
-
 }
